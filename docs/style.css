@@ -1,5 +1,5 @@
 /* =========================================================
-   GLOBAL RESET
+   RESET
 ========================================================= */
 
 * {
@@ -9,21 +9,26 @@
 }
 
 html {
-    width: 100%;
     scroll-behavior: smooth;
 }
 
 body {
-    width: 100%;
     min-height: 100vh;
 
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
 
-    background: linear-gradient(
-        135deg,
-        #ffdde1 0%,
-        #ee9ca7 100%
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #ffe0ec,
+            #fff5f8,
+            #ffd6e7
+        );
 
     color: #4a1c2b;
 
@@ -32,509 +37,25 @@ body {
 
 
 /* =========================================================
-   WELCOME SCREEN
-========================================================= */
-
-.welcome {
-    width: 100%;
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    padding: 20px;
-}
-
-.welcome-card {
-    width: 100%;
-    max-width: 520px;
-
-    padding: 50px 35px;
-
-    background: rgba(255, 255, 255, 0.92);
-
-    border-radius: 30px;
-
-    box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.20);
-
-    animation: appear 1.2s ease;
-
-    backdrop-filter: blur(5px);
-}
-
-.gift {
-    font-size: 80px;
-
-    animation: bounce 1.5s infinite;
-}
-
-.welcome-card h1 {
-    font-size: 42px;
-
-    margin: 20px 0;
-
-    color: #c2185b;
-}
-
-.welcome-card p {
-    font-size: 18px;
-
-    line-height: 1.6;
-
-    margin-bottom: 30px;
-}
-
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
-button {
-    border: none;
-
-    padding: 15px 32px;
-
-    border-radius: 50px;
-
-    background: #ff477e;
-
-    color: white;
-
-    font-size: 17px;
-
-    font-weight: 600;
-
-    cursor: pointer;
-
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        box-shadow 0.3s ease;
-
-    box-shadow:
-        0 8px 20px rgba(255, 71, 126, 0.35);
-}
-
-button:hover {
-    transform: scale(1.07);
-
-    background: #e91e63;
-
-    box-shadow:
-        0 12px 25px rgba(233, 30, 99, 0.4);
-}
-
-button:active {
-    transform: scale(0.97);
-}
-
-
-/* =========================================================
-   HIDDEN
+   COMMON
 ========================================================= */
 
 .hidden {
-    display: none;
+    display: none !important;
 }
-
-
-/* =========================================================
-   HERO SECTION
-========================================================= */
-
-.hero {
-    width: 100%;
-    min-height: 90vh;
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-
-    padding: 50px 20px;
-}
-
-.cake {
-    font-size: 100px;
-
-    animation: bounce 2s infinite;
-}
-
-.hero h1 {
-    width: 100%;
-    max-width: 1000px;
-
-    font-size: clamp(
-        35px,
-        7vw,
-        75px
-    );
-
-    line-height: 1.15;
-
-    margin: 20px 0;
-
-    color: #c2185b;
-}
-
-.hero p {
-    width: 100%;
-    max-width: 700px;
-
-    font-size: 20px;
-
-    line-height: 1.7;
-}
-
-.hearts-text {
-    font-size: 30px;
-
-    margin-top: 30px;
-
-    letter-spacing: 5px;
-}
-
-
-/* =========================================================
-   COMMON SECTION
-========================================================= */
 
 section {
     width: 100%;
-
-    padding: 80px 20px;
 }
 
-section h2 {
-    width: 100%;
-
-    text-align: center;
-
-    font-size: 38px;
-
-    line-height: 1.3;
-
-    margin-bottom: 25px;
-
-    color: #ad1457;
+h1,
+h2,
+h3 {
+    font-weight: 700;
 }
 
-
-/* =========================================================
-   BIRTHDAY MESSAGE
-========================================================= */
-
-.message-section {
-    width: 100%;
-
-    text-align: center;
-}
-
-.message-card {
-    width: 100%;
-    max-width: 800px;
-
-    margin: 0 auto;
-
-    padding: 40px;
-
-    background: rgba(
-        255,
-        255,
-        255,
-        0.92
-    );
-
-    border-radius: 25px;
-
-    box-shadow:
-        0 15px 40px rgba(
-            0,
-            0,
-            0,
-            0.15
-        );
-}
-
-.message-card p {
-    font-size: 20px;
-
-    line-height: 1.8;
-
-    word-wrap: break-word;
-}
-
-
-/* =========================================================
-   VIDEO SECTION
-========================================================= */
-
-.video-section {
-    width: 100%;
-
-    text-align: center;
-
-    padding: 80px 20px;
-}
-
-.video-section > p {
-    font-size: 17px;
-
-    line-height: 1.6;
-
-    margin-bottom: 30px;
-}
-
-
-/* =========================================================
-   RESPONSIVE VIDEO CONTAINER
-========================================================= */
-
-.video-container {
-    width: min(90%, 520px);
-
-    max-height: 75vh;
-
-    margin: 30px auto 0;
-
-    background: #000;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 20px 50px rgba(
-            0,
-            0,
-            0,
-            0.30
-        );
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-}
-
-
-/* =========================================================
-   VIDEO
-========================================================= */
-
-.video-container video {
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    max-width: 100%;
-
-    max-height: 75vh;
-
-    object-fit: contain;
-
-    background: #000;
-}
-
-
-/* =========================================================
-   MEMORY SECTION
-========================================================= */
-
-.memories-section {
-    width: 100%;
-
-    text-align: center;
-}
-
-.memory-grid {
-    width: 100%;
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            auto-fit,
-            minmax(250px, 1fr)
-        );
-
-    gap: 30px;
-}
-
-
-/* =========================================================
-   MEMORY CARD
-========================================================= */
-
-.memory-card {
-    width: 100%;
-
-    background: white;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 15px 30px rgba(
-            0,
-            0,
-            0,
-            0.15
-        );
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-}
-
-.memory-card:hover {
-    transform:
-        translateY(-10px)
-        rotate(1deg);
-
-    box-shadow:
-        0 20px 40px rgba(
-            0,
-            0,
-            0,
-            0.20
-        );
-}
-
-
-/* =========================================================
-   MEMORY IMAGE
-========================================================= */
-
-.memory-card img {
-    display: block;
-
-    width: 100%;
-
-    height: 250px;
-
-    object-fit: cover;
-}
-
-
-/* =========================================================
-   MEMORY CONTENT
-========================================================= */
-
-.memory-content {
-    padding: 20px;
-
-    text-align: left;
-}
-
-.memory-content h3 {
-    color: #d81b60;
-
-    font-size: 21px;
-
-    margin-bottom: 10px;
-}
-
-.memory-content p {
-    font-size: 15px;
-
-    line-height: 1.6;
-
-    color: #555;
-}
-
-
-/* =========================================================
-   FINAL SECTION
-========================================================= */
-
-.final-section {
-    width: 100%;
-
-    min-height: 80vh;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    text-align: center;
-
-    padding: 80px 20px;
-}
-
-.final-card {
-    width: 100%;
-    max-width: 800px;
-
-    padding: 60px 40px;
-
-    background: rgba(
-        255,
-        255,
-        255,
-        0.92
-    );
-
-    border-radius: 30px;
-
-    box-shadow:
-        0 20px 50px rgba(
-            0,
-            0,
-            0,
-            0.20
-        );
-}
-
-.big-heart {
-    font-size: 100px;
-
-    animation:
-        heartbeat 1.2s infinite;
-}
-
-.final-card h2 {
-    margin-top: 20px;
-}
-
-.final-card p {
-    font-size: 20px;
-
-    line-height: 1.8;
-
-    color: #4a1c2b;
-}
-
-.final-card h1 {
-    font-size: 35px;
-
-    line-height: 1.3;
-
-    color: #d81b60;
-
-    margin-top: 30px;
-}
-
-.signature {
-    margin-top: 20px;
-
-    font-style: italic;
+button {
+    font-family: inherit;
 }
 
 
@@ -545,7 +66,8 @@ section h2 {
 #hearts {
     position: fixed;
 
-    inset: 0;
+    top: 0;
+    left: 0;
 
     width: 100%;
     height: 100%;
@@ -554,20 +76,772 @@ section h2 {
 
     overflow: hidden;
 
-    z-index: 10;
+    z-index: 1;
 }
 
 .heart {
-    position: fixed;
+    position: absolute;
 
-    bottom: -40px;
+    bottom: -50px;
 
     font-size: 25px;
 
-    pointer-events: none;
+    animation:
+        floatHeart linear forwards;
+
+    opacity: 0.8;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.9;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   WELCOME SCREEN
+========================================================= */
+
+.welcome {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    position: relative;
+
+    z-index: 5;
+}
+
+.welcome-card {
+    width: 100%;
+    max-width: 600px;
+
+    padding: 55px 40px;
+
+    text-align: center;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(180, 30, 90, 0.2);
+
+    backdrop-filter: blur(10px);
 
     animation:
-        floatUp 6s linear forwards;
+        welcomeAppear 1s ease;
+}
+
+@keyframes welcomeAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.gift {
+    font-size: 75px;
+
+    margin-bottom: 20px;
+
+    animation:
+        giftBounce 2s infinite;
+}
+
+@keyframes giftBounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.welcome-card h1 {
+    font-size: 42px;
+
+    color: #d81b60;
+
+    margin-bottom: 18px;
+}
+
+.welcome-card p {
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.welcome-card button {
+    border: none;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4081,
+            #d81b60
+        );
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px
+        rgba(216, 27, 96, 0.3);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.welcome-card button:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(216, 27, 96, 0.4);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+#mainContent {
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+}
+
+.cake {
+    font-size: 90px;
+
+    margin-bottom: 20px;
+
+    animation:
+        cakeFloat 3s ease-in-out infinite;
+}
+
+@keyframes cakeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.hero h1 {
+    max-width: 1000px;
+
+    font-size:
+        clamp(
+            35px,
+            7vw,
+            70px
+        );
+
+    line-height: 1.2;
+
+    color: #c2185b;
+
+    margin-bottom: 25px;
+}
+
+#friendName {
+    color: #ff4081;
+}
+
+.hero p {
+    max-width: 750px;
+
+    font-size:
+        clamp(
+            17px,
+            2.5vw,
+            22px
+        );
+
+    line-height: 1.7;
+}
+
+.hearts-text {
+    margin-top: 25px;
+
+    font-size: 30px;
+
+    letter-spacing: 8px;
+}
+
+
+/* =========================================================
+   MESSAGE SECTION
+========================================================= */
+
+.message-section {
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.message-section h2 {
+    font-size:
+        clamp(
+            28px,
+            5vw,
+            42px
+        );
+
+    color: #ad1457;
+
+    margin-bottom: 35px;
+}
+
+.message-card {
+    width: 100%;
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 45px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.12);
+
+    text-align: left;
+}
+
+.message-card p {
+    font-size: 18px;
+
+    line-height: 2;
+
+    color: #4a1c2b;
+}
+
+
+/* =========================================================
+   VIDEO SECTION
+========================================================= */
+
+.video-section {
+    width: 100%;
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.video-section h2 {
+    font-size:
+        clamp(
+            28px,
+            5vw,
+            42px
+        );
+
+    color: #ad1457;
+
+    margin-bottom: 15px;
+}
+
+.video-section > p {
+    font-size: 18px;
+
+    margin-bottom: 35px;
+
+    line-height: 1.6;
+}
+
+.video-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 15px;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+}
+
+.video-container video {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 600px;
+
+    margin: 0 auto;
+
+    border-radius: 18px;
+
+    object-fit: contain;
+
+    background: #000;
+}
+
+
+/* =========================================================
+   MEMORIES SECTION
+========================================================= */
+
+.memories-section {
+    width: 100%;
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.memories-section h2 {
+    font-size:
+        clamp(
+            28px,
+            5vw,
+            42px
+        );
+
+    color: #ad1457;
+
+    margin-bottom: 40px;
+}
+
+.memory-grid {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(260px, 1fr)
+        );
+
+    gap: 25px;
+}
+
+.memory-card {
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 35px
+        rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.memory-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(0, 0, 0, 0.18);
+}
+
+.memory-card img {
+    display: block;
+
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+}
+
+.memory-content {
+    padding: 22px;
+}
+
+.memory-content h3 {
+    font-size: 22px;
+
+    color: #d81b60;
+
+    margin-bottom: 10px;
+}
+
+.memory-content p {
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   ❤️ MY DRAWING SECTION
+========================================================= */
+
+.drawing-section {
+    width: 100%;
+
+    padding: 80px 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   DRAWING TITLE
+========================================================= */
+
+.drawing-section h2 {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto 12px;
+
+    font-size:
+        clamp(
+            27px,
+            5vw,
+            42px
+        );
+
+    line-height: 1.3;
+
+    color: #ad1457;
+}
+
+.drawing-subtitle {
+    width: 100%;
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    padding: 0 10px;
+
+    font-size:
+        clamp(
+            15px,
+            2vw,
+            19px
+        );
+
+    line-height: 1.7;
+
+    color: #4a1c2b;
+}
+
+
+/* =========================================================
+   DRAWING CARD
+========================================================= */
+
+.drawing-card {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0, 0, 0, 0.16);
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+/* =========================================================
+   DRAWING CARD HOVER
+========================================================= */
+
+.drawing-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 55px
+        rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   DRAWING IMAGE
+========================================================= */
+
+.drawing-card img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   DRAWING TEXT
+========================================================= */
+
+.drawing-message {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 0 10px;
+
+    text-align: center;
+}
+
+.drawing-message h3 {
+    margin-bottom: 15px;
+
+    color: #d81b60;
+
+    font-size:
+        clamp(
+            20px,
+            4vw,
+            28px
+        );
+
+    line-height: 1.4;
+}
+
+.drawing-message p {
+    width: 100%;
+    max-width: 720px;
+
+    margin: 0 auto 15px;
+
+    font-size:
+        clamp(
+            15px,
+            2vw,
+            18px
+        );
+
+    line-height: 1.8;
+
+    color: #4a1c2b;
+}
+
+
+/* =========================================================
+   FINAL SECTION
+========================================================= */
+
+.final-section {
+    width: 100%;
+
+    padding: 100px 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.final-card {
+    width: 100%;
+    max-width: 850px;
+
+    padding: 55px 40px;
+
+    background:
+        rgba(255, 255, 255, 0.94);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.15);
+}
+
+.big-heart {
+    font-size: 80px;
+
+    margin-bottom: 20px;
+
+    animation:
+        heartBeat 1.5s infinite;
+}
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+.final-card h2 {
+    font-size:
+        clamp(
+            30px,
+            5vw,
+            45px
+        );
+
+    color: #ad1457;
+
+    margin-bottom: 25px;
+}
+
+.final-card p {
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    margin-bottom: 25px;
+}
+
+.final-card h1 {
+    font-size:
+        clamp(
+            28px,
+            5vw,
+            45px
+        );
+
+    color: #d81b60;
+
+    margin-bottom: 20px;
+}
+
+.signature {
+    font-style: italic;
+
+    color: #8e2449;
+
+    font-size: 17px !important;
 }
 
 
@@ -581,119 +855,59 @@ section h2 {
     top: 0;
     left: 0;
 
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
 
     pointer-events: none;
 
-    z-index: 20;
-}
-
-
-/* =========================================================
-   ANIMATIONS
-========================================================= */
-
-@keyframes bounce {
-
-    0%,
-    100% {
-        transform:
-            translateY(0);
-    }
-
-    50% {
-        transform:
-            translateY(-20px);
-    }
-}
-
-
-@keyframes heartbeat {
-
-    0% {
-        transform:
-            scale(1);
-    }
-
-    25% {
-        transform:
-            scale(1.2);
-    }
-
-    50% {
-        transform:
-            scale(1);
-    }
-
-    75% {
-        transform:
-            scale(1.2);
-    }
-
-    100% {
-        transform:
-            scale(1);
-    }
-}
-
-
-@keyframes floatUp {
-
-    0% {
-        transform:
-            translateY(0)
-            rotate(0deg);
-
-        opacity: 1;
-    }
-
-    100% {
-        transform:
-            translateY(-110vh)
-            rotate(360deg);
-
-        opacity: 0;
-    }
-}
-
-
-@keyframes appear {
-
-    from {
-        opacity: 0;
-
-        transform:
-            scale(0.7);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            scale(1);
-    }
+    z-index: 9999;
 }
 
 
 /* =========================================================
    TABLET
+   MAX 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    .hero {
+        min-height: 80vh;
+
+        padding: 70px 20px;
+    }
+
+    .message-card {
+        padding: 35px;
+    }
+
+    .drawing-card {
+        max-width: 750px;
+
+        padding: 25px;
+    }
+
+    .final-card {
+        padding: 45px 30px;
+    }
+}
+
+
+/* =========================================================
+   TABLET / LARGE MOBILE
+   MAX 768px
 ========================================================= */
 
 @media (max-width: 768px) {
 
     .welcome {
-        padding: 15px;
+        padding: 20px;
     }
 
     .welcome-card {
-        padding: 40px 25px;
+        padding: 45px 25px;
 
         border-radius: 25px;
-    }
-
-    .gift {
-        font-size: 70px;
     }
 
     .welcome-card h1 {
@@ -701,101 +915,80 @@ section h2 {
     }
 
     .welcome-card p {
-        font-size: 16px;
+        font-size: 17px;
+    }
+
+    .gift {
+        font-size: 65px;
     }
 
 
     /* HERO */
 
     .hero {
-        min-height: 80vh;
+        min-height: 75vh;
 
-        padding: 50px 15px;
+        padding: 60px 15px;
     }
 
     .cake {
-        font-size: 80px;
-    }
-
-    .hero h1 {
-        font-size: clamp(
-            32px,
-            9vw,
-            55px
-        );
+        font-size: 75px;
     }
 
     .hero p {
         font-size: 17px;
+
+        padding: 0 10px;
     }
 
     .hearts-text {
         font-size: 25px;
-    }
 
-
-    /* SECTIONS */
-
-    section {
-        padding: 60px 15px;
-    }
-
-    section h2 {
-        font-size: 30px;
+        letter-spacing: 5px;
     }
 
 
     /* MESSAGE */
 
-    .message-card {
-        padding: 30px 20px;
+    .message-section {
+        padding: 60px 15px;
+    }
 
-        border-radius: 20px;
+    .message-card {
+        padding: 30px 22px;
+
+        border-radius: 25px;
     }
 
     .message-card p {
         font-size: 17px;
 
-        line-height: 1.7;
+        line-height: 1.85;
     }
 
 
     /* VIDEO */
 
     .video-section {
-        padding: 60px 10px;
-    }
-
-    .video-section h2 {
-        font-size: 29px;
-    }
-
-    .video-section > p {
-        font-size: 15px;
-
-        padding: 0 10px;
+        padding: 60px 15px;
     }
 
     .video-container {
-        width: min(92%, 500px);
+        padding: 10px;
 
-        max-height: 70vh;
-
-        margin-top: 20px;
-
-        border-radius: 15px;
+        border-radius: 20px;
     }
 
     .video-container video {
-        width: 100%;
-
-        max-height: 70vh;
-
-        object-fit: contain;
+        border-radius: 12px;
     }
 
 
-    /* MEMORY GRID */
+    /* MEMORIES */
+
+    .memories-section {
+        padding: 60px 15px;
+    }
 
     .memory-grid {
         grid-template-columns:
@@ -808,180 +1001,407 @@ section h2 {
     }
 
     .memory-card img {
-        height: 220px;
+        height: 250px;
+    }
+
+
+    /* DRAWING */
+
+    .drawing-section {
+        padding: 60px 15px;
+    }
+
+    .drawing-card {
+        width: 100%;
+
+        padding: 20px;
+
+        border-radius: 25px;
+    }
+
+    .drawing-card img {
+        width: 100%;
+
+        height: auto;
+
+        max-width: 100%;
+    }
+
+    .drawing-message {
+        margin-top: 25px;
+
+        padding: 0 5px;
     }
 
 
     /* FINAL */
 
     .final-section {
-        min-height: 70vh;
-
-        padding: 60px 15px;
+        padding: 70px 15px;
     }
 
     .final-card {
         padding: 45px 25px;
 
-        border-radius: 25px;
+        border-radius: 28px;
     }
 
     .big-heart {
-        font-size: 80px;
-    }
-
-    .final-card p {
-        font-size: 17px;
-    }
-
-    .final-card h1 {
-        font-size: 29px;
+        font-size: 65px;
     }
 }
 
 
 /* =========================================================
    MOBILE PHONE
+   MAX 600px
 ========================================================= */
 
 @media (max-width: 600px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* WELCOME */
+
+    .welcome {
+        min-height: 100svh;
+
+        padding: 15px;
+    }
+
     .welcome-card {
-        padding: 35px 20px;
+        width: 100%;
+
+        padding: 40px 20px;
+
+        border-radius: 22px;
     }
 
     .gift {
-        font-size: 65px;
+        font-size: 58px;
     }
 
     .welcome-card h1 {
         font-size: 30px;
     }
 
+    .welcome-card p {
+        font-size: 16px;
+
+        line-height: 1.6;
+    }
+
+    .welcome-card button {
+        width: 100%;
+
+        max-width: 300px;
+
+        padding: 15px 20px;
+
+        font-size: 16px;
+    }
+
 
     /* HERO */
 
     .hero {
-        min-height: 75vh;
+        min-height: 75svh;
 
-        padding: 40px 12px;
+        padding: 50px 12px;
     }
 
     .cake {
-        font-size: 70px;
+        font-size: 65px;
+
+        margin-bottom: 15px;
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 34px;
 
-        word-wrap: break-word;
+        line-height: 1.25;
     }
 
     .hero p {
         font-size: 16px;
+
+        line-height: 1.7;
     }
 
     .hearts-text {
-        font-size: 22px;
+        font-size: 21px;
 
-        letter-spacing: 2px;
-    }
-
-
-    /* SECTIONS */
-
-    section {
-        padding: 50px 10px;
-    }
-
-    section h2 {
-        font-size: 27px;
+        letter-spacing: 3px;
     }
 
 
     /* MESSAGE */
 
+    .message-section {
+        padding: 50px 10px;
+    }
+
+    .message-section h2 {
+        font-size: 27px;
+    }
+
     .message-card {
+        width: 100%;
+
         padding: 25px 18px;
+
+        border-radius: 20px;
     }
 
     .message-card p {
         font-size: 16px;
 
-        line-height: 1.7;
+        line-height: 1.8;
     }
 
 
     /* VIDEO */
 
     .video-section {
-        padding: 50px 8px;
+        padding: 50px 10px;
+    }
+
+    .video-section h2 {
+        font-size: 27px;
+    }
+
+    .video-section > p {
+        font-size: 16px;
+
+        line-height: 1.6;
     }
 
     .video-container {
-        width: 94%;
+        width: 100%;
 
-        max-width: 480px;
+        padding: 7px;
 
-        max-height: 70vh;
-
-        border-radius: 12px;
+        border-radius: 18px;
     }
 
     .video-container video {
         width: 100%;
 
-        max-width: 100%;
+        height: auto;
 
-        max-height: 70vh;
+        max-height: none;
 
-        object-fit: contain;
+        border-radius: 10px;
     }
 
 
-    /* MEMORY */
+    /* MEMORIES */
+
+    .memories-section {
+        padding: 50px 10px;
+    }
+
+    .memories-section h2 {
+        font-size: 27px;
+    }
 
     .memory-grid {
+        width: 100%;
+
         grid-template-columns: 1fr;
 
-        gap: 25px;
+        gap: 20px;
+    }
 
-        padding: 0 8px;
+    .memory-card {
+        width: 100%;
+
+        border-radius: 20px;
     }
 
     .memory-card img {
-        height: 250px;
+        width: 100%;
+
+        height: auto;
+
+        max-height: 450px;
+
+        object-fit: cover;
+    }
+
+    .memory-content {
+        padding: 20px;
+    }
+
+    .memory-content h3 {
+        font-size: 20px;
+    }
+
+    .memory-content p {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+
+    /* =====================================================
+       DRAWING - MOBILE
+    ===================================================== */
+
+    .drawing-section {
+        width: 100%;
+
+        padding: 50px 10px;
+    }
+
+    .drawing-section h2 {
+        width: 100%;
+
+        font-size: 27px;
+
+        line-height: 1.3;
+
+        padding: 0 5px;
+
+        margin-bottom: 12px;
+    }
+
+    .drawing-subtitle {
+        width: 100%;
+
+        font-size: 16px;
+
+        line-height: 1.6;
+
+        padding: 0 8px;
+
+        margin-bottom: 25px;
+    }
+
+
+    /* DRAWING CARD */
+
+    .drawing-card {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 0 auto;
+
+        padding: 10px;
+
+        border-radius: 20px;
+
+        overflow: hidden;
+    }
+
+
+    /* DRAWING IMAGE */
+
+    .drawing-card img {
+        display: block;
+
+        width: 100%;
+
+        max-width: 100%;
+
+        height: auto;
+
+        max-height: none;
+
+        margin: 0 auto;
+
+        object-fit: contain;
+
+        border-radius: 12px;
+    }
+
+
+    /* DRAWING TEXT */
+
+    .drawing-message {
+        width: 100%;
+
+        margin-top: 20px;
+
+        padding: 0 5px;
+    }
+
+    .drawing-message h3 {
+        font-size: 21px;
+
+        line-height: 1.4;
+
+        margin-bottom: 12px;
+    }
+
+    .drawing-message p {
+        width: 100%;
+
+        font-size: 16px;
+
+        line-height: 1.7;
+
+        margin-bottom: 12px;
     }
 
 
     /* FINAL */
 
+    .final-section {
+        padding: 60px 10px;
+    }
+
     .final-card {
+        width: 100%;
+
         padding: 40px 20px;
+
+        border-radius: 22px;
     }
 
     .big-heart {
-        font-size: 70px;
+        font-size: 60px;
+    }
+
+    .final-card h2 {
+        font-size: 30px;
     }
 
     .final-card p {
         font-size: 16px;
+
+        line-height: 1.7;
     }
 
     .final-card h1 {
-        font-size: 27px;
+        font-size: 29px;
+
+        line-height: 1.3;
+    }
+
+    .signature {
+        font-size: 15px !important;
     }
 }
 
 
 /* =========================================================
    SMALL MOBILE
+   MAX 400px
 ========================================================= */
 
 @media (max-width: 400px) {
 
     .welcome-card {
-        padding: 30px 15px;
+        padding: 35px 16px;
+    }
+
+    .gift {
+        font-size: 52px;
     }
 
     .welcome-card h1 {
@@ -992,484 +1412,141 @@ section h2 {
         font-size: 15px;
     }
 
-    button {
-        padding: 13px 24px;
 
-        font-size: 15px;
+    /* HERO */
+
+    .hero {
+        padding: 45px 10px;
     }
 
-
     .cake {
-        font-size: 60px;
+        font-size: 58px;
     }
 
     .hero h1 {
-        font-size: 31px;
+        font-size: 30px;
     }
 
     .hero p {
         font-size: 15px;
     }
 
+    .hearts-text {
+        font-size: 18px;
 
-    section h2 {
-        font-size: 24px;
+        letter-spacing: 2px;
     }
 
 
-    /* SMALL PHONE VIDEO */
+    /* MESSAGE */
+
+    .message-card {
+        padding: 22px 15px;
+    }
+
+    .message-card p {
+        font-size: 15px;
+    }
+
+
+    /* VIDEO */
 
     .video-container {
-        width: 96%;
+        padding: 5px;
+    }
 
-        max-height: 65vh;
+
+    /* MEMORIES */
+
+    .memory-card img {
+        max-height: 400px;
+    }
+
+
+    /* =====================================================
+       DRAWING - SMALL PHONE
+    ===================================================== */
+
+    .drawing-section {
+        padding: 45px 8px;
+    }
+
+    .drawing-section h2 {
+        font-size: 24px;
+
+        padding: 0 3px;
+    }
+
+    .drawing-subtitle {
+        font-size: 15px;
+
+        padding: 0 5px;
+
+        margin-bottom: 22px;
+    }
+
+    .drawing-card {
+        width: 100%;
+
+        padding: 8px;
+
+        border-radius: 17px;
+    }
+
+    .drawing-card img {
+        width: 100%;
+
+        height: auto;
+
+        max-width: 100%;
+
+        max-height: none;
 
         border-radius: 10px;
     }
 
-    .video-container video {
-        max-height: 65vh;
+    .drawing-message {
+        margin-top: 18px;
+
+        padding: 0 3px;
+    }
+
+    .drawing-message h3 {
+        font-size: 19px;
+
+        line-height: 1.4;
+    }
+
+    .drawing-message p {
+        font-size: 15px;
+
+        line-height: 1.7;
     }
 
 
-    .memory-card img {
-        height: 230px;
+    /* FINAL */
+
+    .final-section {
+        padding: 50px 8px;
     }
 
+    .final-card {
+        padding: 35px 16px;
+    }
 
-    .final-card h1 {
-        font-size: 24px;
+    .big-heart {
+        font-size: 52px;
+    }
+
+    .final-card h2 {
+        font-size: 27px;
     }
 
     .final-card p {
         font-size: 15px;
     }
-}
 
-
-/* =========================================================
-   VERY LARGE SCREENS
-========================================================= */
-
-@media (min-width: 1400px) {
-
-    .video-container {
-        width: 500px;
-
-        max-height: 75vh;
-    }
-
-    .video-container video {
-        max-height: 75vh;
-    }
-
-    .memory-grid {
-        max-width: 1200px;
-    }
-}
-
-/* =========================================================
-   MY DRAWING SECTION
-========================================================= */
-
-.drawing-section {
-    width: 100%;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-
-/* =========================================================
-   DRAWING TITLE
-========================================================= */
-
-.drawing-section h2 {
-    width: 100%;
-
-    text-align: center;
-
-    font-size: 38px;
-
-    line-height: 1.3;
-
-    margin-bottom: 15px;
-
-    color: #ad1457;
-}
-
-
-.drawing-subtitle {
-    font-size: 18px;
-
-    line-height: 1.6;
-
-    margin-bottom: 35px;
-
-    color: #4a1c2b;
-}
-
-
-/* =========================================================
-   DRAWING CARD
-========================================================= */
-
-.drawing-card {
-    width: 100%;
-
-    max-width: 850px;
-
-    margin: 0 auto;
-
-    padding: 30px;
-
-    background: rgba(
-        255,
-        255,
-        255,
-        0.94
-    );
-
-    border-radius: 30px;
-
-    box-shadow:
-        0 20px 50px rgba(
-            0,
-            0,
-            0,
-            0.18
-        );
-
-    transition:
-        transform 0.4s ease,
-        box-shadow 0.4s ease;
-
-    overflow: hidden;
-}
-
-
-/* =========================================================
-   CARD HOVER
-========================================================= */
-
-.drawing-card:hover {
-
-    transform:
-        translateY(-8px);
-
-    box-shadow:
-        0 25px 55px rgba(
-            0,
-            0,
-            0,
-            0.22
-        );
-}
-
-
-/* =========================================================
-   DRAWING IMAGE
-========================================================= */
-
-.drawing-card img {
-
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    max-width: 100%;
-
-    max-height: none;
-
-    margin: 0 auto;
-
-    object-fit: contain;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 10px 30px rgba(
-            0,
-            0,
-            0,
-            0.15
-        );
-}
-
-
-/* =========================================================
-   DRAWING MESSAGE
-========================================================= */
-
-.drawing-message {
-
-    margin-top: 30px;
-
-    padding: 10px 15px;
-
-    text-align: center;
-}
-
-
-.drawing-message h3 {
-
-    color: #d81b60;
-
-    font-size: 26px;
-
-    line-height: 1.4;
-
-    margin-bottom: 15px;
-}
-
-
-.drawing-message p {
-
-    font-size: 18px;
-
-    line-height: 1.8;
-
-    color: #4a1c2b;
-
-    margin-bottom: 15px;
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .drawing-section {
-
-        padding: 60px 15px;
-    }
-
-
-    .drawing-section h2 {
-
-        font-size: 30px;
-    }
-
-
-    .drawing-subtitle {
-
-        font-size: 17px;
-
-        padding: 0 10px;
-    }
-
-
-    .drawing-card {
-
-        width: 100%;
-
-        max-width: 700px;
-
-        padding: 22px;
-
-        border-radius: 25px;
-    }
-
-
-    .drawing-card img {
-
-        width: 100%;
-
-        height: auto;
-
-        max-width: 100%;
-
-        max-height: none;
-
-        border-radius: 15px;
-    }
-
-
-    .drawing-message {
-
-        margin-top: 25px;
-
-        padding: 5px 10px;
-    }
-
-
-    .drawing-message h3 {
-
-        font-size: 23px;
-    }
-
-
-    .drawing-message p {
-
-        font-size: 17px;
-
-        line-height: 1.7;
-    }
-}
-
-
-/* =========================================================
-   MOBILE PHONE
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .drawing-section {
-
-        width: 100%;
-
-        padding: 50px 10px;
-    }
-
-
-    .drawing-section h2 {
-
-        font-size: 27px;
-
-        line-height: 1.3;
-    }
-
-
-    .drawing-subtitle {
-
-        font-size: 16px;
-
-        line-height: 1.6;
-
-        padding: 0 10px;
-
-        margin-bottom: 25px;
-    }
-
-
-    .drawing-card {
-
-        width: 100%;
-
-        max-width: 100%;
-
-        padding: 12px;
-
-        border-radius: 20px;
-    }
-
-
-    .drawing-card img {
-
-        display: block;
-
-        width: 100%;
-
-        height: auto;
-
-        max-width: 100%;
-
-        max-height: none;
-
-        object-fit: contain;
-
-        border-radius: 12px;
-    }
-
-
-    .drawing-message {
-
-        margin-top: 20px;
-
-        padding: 5px;
-    }
-
-
-    .drawing-message h3 {
-
-        font-size: 21px;
-
-        line-height: 1.4;
-    }
-
-
-    .drawing-message p {
-
-        font-size: 16px;
-
-        line-height: 1.7;
-
-        margin-bottom: 12px;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 400px) {
-
-    .drawing-section {
-
-        padding: 45px 8px;
-    }
-
-
-    .drawing-section h2 {
-
-        font-size: 24px;
-    }
-
-
-    .drawing-subtitle {
-
-        font-size: 15px;
-
-        padding: 0 8px;
-    }
-
-
-    .drawing-card {
-
-        width: 100%;
-
-        padding: 10px;
-
-        border-radius: 18px;
-    }
-
-
-    .drawing-card img {
-
-        width: 100%;
-
-        height: auto;
-
-        max-width: 100%;
-
-        max-height: none;
-
-        border-radius: 10px;
-    }
-
-
-    .drawing-message {
-
-        margin-top: 18px;
-
-        padding: 3px;
-    }
-
-
-    .drawing-message h3 {
-
-        font-size: 19px;
-    }
-
-
-    .drawing-message p {
-
-        font-size: 15px;
-
-        line-height: 1.7;
+    .final-card h1 {
+        font-size: 26px;
     }
 }
