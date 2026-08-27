@@ -1067,3 +1067,189 @@ section h2 {
         max-width: 1200px;
     }
 }
+
+/* =========================================================
+   MY DRAWING SECTION
+========================================================= */
+
+.drawing-section {
+    width: 100%;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.drawing-subtitle {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.drawing-card {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background: rgba(255, 255, 255, 0.94);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.drawing-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 25px 55px rgba(0, 0, 0, 0.22);
+}
+
+.drawing-card img {
+    display: block;
+
+    width: 100%;
+    max-width: 650px;
+
+    max-height: 700px;
+
+    margin: 0 auto;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.drawing-message {
+    margin-top: 30px;
+
+    padding: 10px 15px;
+}
+
+.drawing-message h3 {
+    color: #d81b60;
+
+    font-size: 26px;
+
+    margin-bottom: 15px;
+}
+
+.drawing-message p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #4a1c2b;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   DRAWING - TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .drawing-section {
+        padding: 60px 15px;
+    }
+
+    .drawing-card {
+        padding: 25px;
+
+        border-radius: 25px;
+    }
+
+    .drawing-card img {
+        max-height: 600px;
+
+        border-radius: 15px;
+    }
+
+    .drawing-message h3 {
+        font-size: 23px;
+    }
+
+    .drawing-message p {
+        font-size: 17px;
+    }
+}
+
+
+/* =========================================================
+   DRAWING - MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .drawing-section {
+        padding: 50px 10px;
+    }
+
+    .drawing-subtitle {
+        font-size: 16px;
+
+        padding: 0 10px;
+    }
+
+    .drawing-card {
+        padding: 18px;
+
+        border-radius: 20px;
+    }
+
+    .drawing-card img {
+        width: 100%;
+
+        max-height: 500px;
+
+        border-radius: 12px;
+    }
+
+    .drawing-message {
+        padding: 5px;
+    }
+
+    .drawing-message h3 {
+        font-size: 21px;
+    }
+
+    .drawing-message p {
+        font-size: 16px;
+
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================================================
+   DRAWING - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+    .drawing-card {
+        padding: 14px;
+    }
+
+    .drawing-card img {
+        max-height: 400px;
+    }
+
+    .drawing-message h3 {
+        font-size: 19px;
+    }
+
+    .drawing-message p {
+        font-size: 15px;
+    }
+}
