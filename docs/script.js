@@ -1,3 +1,86 @@
+/* =========================================================
+   PASSWORD PROTECTION
+========================================================= */
+
+const SECRET_PASSWORD = "bestie2026";
+
+
+function checkPassword() {
+
+    const input =
+        document.getElementById("passwordInput");
+
+    const error =
+        document.getElementById("passwordError");
+
+    const enteredPassword =
+        input.value.trim();
+
+
+    if (enteredPassword === SECRET_PASSWORD) {
+
+        /* Correct password */
+
+        error.textContent = "";
+
+        const passwordScreen =
+            document.getElementById(
+                "passwordScreen"
+            );
+
+        passwordScreen.classList.add(
+            "password-unlocked"
+        );
+
+        setTimeout(() => {
+
+            passwordScreen.style.display =
+                "none";
+
+        }, 700);
+
+    } else {
+
+        /* Wrong password */
+
+        error.textContent =
+            "Oops! That's not the secret password 😜❤️";
+
+        input.value = "";
+
+        input.focus();
+
+        const card =
+            document.querySelector(
+                ".password-card"
+            );
+
+        card.classList.remove(
+            "wrong-password"
+        );
+
+        /* Restart animation */
+
+        void card.offsetWidth;
+
+        card.classList.add(
+            "wrong-password"
+        );
+    }
+}
+
+
+/* Press Enter to unlock */
+
+function handlePasswordKey(event) {
+
+    if (event.key === "Enter") {
+
+        checkPassword();
+
+    }
+}
+
 /* -------------------------
    Open Surprise
 ------------------------- */

@@ -17,6 +17,54 @@
     <!-- Floating Hearts -->
     <div id="hearts"></div>
 
+    <!-- ================================
+     PASSWORD LOCK SCREEN
+================================ -->
+
+<section id="passwordScreen" class="password-screen">
+
+    <div class="password-card">
+
+        <div class="lock-icon">
+            🔐
+        </div>
+
+        <h1>Wait... 💕</h1>
+
+        <p>
+            This surprise is only for someone very special. ❤️
+        </p>
+
+        <p class="password-hint">
+            Enter the secret password to continue...
+        </p>
+
+        <div class="password-box">
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Enter password"
+                autocomplete="off"
+                onkeydown="handlePasswordKey(event)"
+            >
+
+            <button onclick="checkPassword()">
+                Unlock My Surprise 💝
+            </button>
+
+        </div>
+
+        <p id="passwordError" class="password-error"></p>
+
+        <div class="password-heart">
+            ❤️
+        </div>
+
+    </div>
+
+</section>
+
     <!-- Welcome Screen -->
     <section id="welcome" class="welcome">
 
